@@ -2,7 +2,6 @@
 name: "🐞 Bug Report"
 about: "Einen Fehler oder ein unerwartetes Verhalten im System melden."
 title: "[Bug] "
-type: "🐞 Bug"
 ---
 
 ### Beschreibung des Bugs
