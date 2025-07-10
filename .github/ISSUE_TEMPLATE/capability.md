@@ -8,6 +8,9 @@ type: "⚙️ Capability"
 ### Purpose 
 *Describe what this capability (internal building-block) should enable.*
 
+#### Required by 
+*Which Feature or Job Story requires this functionality (what part of it)?*
+
 ---
 
 ### Public Interface
