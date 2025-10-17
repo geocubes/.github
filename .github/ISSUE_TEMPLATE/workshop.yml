@@ -1,17 +1,78 @@
 name: Workshop
-description: DST / EventStorming / Example Mapping
-labels: ["type:workshop"]
+description: Track a workshop (DST, EventStorming, Example Mapping, Other)
+title: "Workshop: <short title>"
+labels: ["type:workshop","status:ready"]
+# Optional: map to an org-level Issue Type if you've defined one
+# type: workshop
+# Optional: auto-add to a project (replace with your org/project IDs)
+# projects: ["your-org/1"]
+
+assignees: []
+
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Workshop Tracking
+        Please fill out the key details. Fields marked as required must be completed.
+
   - type: dropdown
     id: format
-    attributes: {label: Format, options: ["DST","Capability Storming","Example Mapping","Review"]}
-    validations: {required: true}
+    attributes:
+      label: Format
+      description: Choose the workshop format
+      options:
+        - DST
+        - EventStorming
+        - Example Mapping
+        - Review
+        - Other
+    validations:
+      required: true
+
   - type: input
     id: date
-    attributes: {label: Date}
+    attributes:
+      label: Date
+      placeholder: "YYYY-MM-DD"
+
   - type: textarea
     id: goal
-    attributes: {label: Goal / prompts}
+    attributes:
+      label: Goal / Prompts
+      description: What do we want to achieve or clarify?
+      placeholder: "e.g., Define MVP capabilities for HS; clarify tilt thresholds…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: participants
+    attributes:
+      label: Participants
+      description: People and roles attending
+      placeholder: "Alice (Geotech), Bob (Risk), Carol (PM)…"
+
+  - type: textarea
+    id: agenda
+    attributes:
+      label: Agenda (outline)
+      value: |
+        - Intro (5’)
+        - Main activity (30–40’)
+        - Synthesis & next steps (10’)
+
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Artifacts / Links
+      description: Link DST diagrams, docs, or slides
+      placeholder: "docs/domain/…, egon export, etc."
+
   - type: textarea
     id: outcomes
-    attributes: {label: Outcomes (links to artifacts, issues)}
+    attributes:
+      label: Outcomes & Next Actions
+      description: Decisions, open questions, and follow-ups
+      placeholder: "- Decision A…\n- Open: …\n- Next: create features X, Y"
+    validations:
+      required: true
