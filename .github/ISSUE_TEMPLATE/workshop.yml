@@ -1,9 +1,9 @@
 name: Workshop
-description: Track a workshop (DST, EventStorming, Example Mapping, Other)
-title: "Workshop: <short title>"
-labels: ["type:workshop","status:ready"]
+description: Workshop-Dokumentation (z.B. DST, EventStorming, Example Mapping, Sonstiges)
+title: "Workshop: <Kurzbeschreibung>"
+labels: ["type:workshop","status:planned"]
 # Optional: map to an org-level Issue Type if you've defined one
-# type: workshop
+type: Workshop
 # Optional: auto-add to a project (replace with your org/project IDs)
 # projects: ["your-org/1"]
 
@@ -13,66 +13,67 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Workshop Tracking
-        Please fill out the key details. Fields marked as required must be completed.
+        ## Workshop-Erfassung
+        Bitte die wichtigsten Informationen zum Workshop eintragen.
+        Pflichtfelder sind mit *erforderlich* markiert.
 
   - type: dropdown
     id: format
     attributes:
       label: Format
-      description: Choose the workshop format
+      description: Wähle das Workshop-Format aus
       options:
-        - DST
-        - EventStorming
-        - Example Mapping
+        - Domain Storytelling (DST)
+        - EventStorming (ES)
+        - Example Mapping (EM)
         - Review
-        - Other
+        - Sonstiges
     validations:
       required: true
 
   - type: input
     id: date
     attributes:
-      label: Date
+      label: Datum
       placeholder: "YYYY-MM-DD"
 
   - type: textarea
     id: goal
     attributes:
-      label: Goal / Prompts
-      description: What do we want to achieve or clarify?
-      placeholder: "e.g., Define MVP capabilities for HS; clarify tilt thresholds…"
+      label: Ziel / Fragestellungen
+      description: Was soll im Workshop erreicht oder geklärt werden?
+      placeholder: "z. B. MVP-Fähigkeiten für HS definieren; Kriterien für Schiefstellung abstimmen..."
     validations:
       required: true
 
   - type: textarea
     id: participants
     attributes:
-      label: Participants
-      description: People and roles attending
-      placeholder: "Alice (Geotech), Bob (Risk), Carol (PM)…"
+      label: Teilnehmende
+      description: Personen und Rollen
+      placeholder: "Anna (Geotechnik), Ben (Risiko), Carla (PM)..."
 
   - type: textarea
     id: agenda
     attributes:
-      label: Agenda (outline)
+      label: Agenda (Ablauf)
       value: |
-        - Intro (5’)
-        - Main activity (30–40’)
-        - Synthesis & next steps (10’)
+        - Begrüßung & Ziel (5 min)
+        - Hauptaktivität (30–40 min)
+        - Zusammenfassung & nächste Schritte (10 min)
 
   - type: textarea
     id: artifacts
     attributes:
-      label: Artifacts / Links
-      description: Link DST diagrams, docs, or slides
+      label: Artefakte / Links
+      description: Verweise auf Whiteboards, Dokumente oder Slides
       placeholder: "docs/domain/…, egon export, etc."
 
   - type: textarea
     id: outcomes
     attributes:
-      label: Outcomes & Next Actions
-      description: Decisions, open questions, and follow-ups
-      placeholder: "- Decision A…\n- Open: …\n- Next: create features X, Y"
+      label: Ergebnisse & Nächste Schritte
+      description: Entscheidungen, offene Fragen, Folgeaktionen
+      placeholder: "- Entscheidung A …\n- Offen: …\n- Nächster Schritt: Features X, Y erstellen"
     validations:
       required: true
