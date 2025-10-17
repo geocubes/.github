@@ -1,0 +1,17 @@
+name: Workshop
+description: DST / EventStorming / Example Mapping
+labels: ["type:workshop"]
+body:
+  - type: dropdown
+    id: format
+    attributes: {label: Format, options: ["DST","Capability Storming","Example Mapping","Review"]}
+    validations: {required: true}
+  - type: input
+    id: date
+    attributes: {label: Date}
+  - type: textarea
+    id: goal
+    attributes: {label: Goal / prompts}
+  - type: textarea
+    id: outcomes
+    attributes: {label: Outcomes (links to artifacts, issues)}
