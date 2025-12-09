@@ -1,6 +1,15 @@
 # Org-wide label definitions for geocubes
 # Synced to all repositories via GitHub Actions
 
+# TYPE - Special work types (beyond standard Issue Types)
+- name: type:workshop
+  description: DDD workshop (DST, EventStorming, Example Mapping)
+  color: d4c5f9
+
+- name: type:meeting
+  description: Meeting or internal coordination
+  color: d4c5f9
+
 # SCOPE - Organizational boundary
 - name: scope:internal
   description: GmbH, admin, legal, company matters

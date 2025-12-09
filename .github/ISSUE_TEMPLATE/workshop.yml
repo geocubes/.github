@@ -1,6 +1,6 @@
 name: "Workshop"
 description: "Workshop dokumentieren (DST, EventStorming, Example Mapping)"
-labels: []
+labels: ["type:workshop"]
 
 body:
   - type: markdown

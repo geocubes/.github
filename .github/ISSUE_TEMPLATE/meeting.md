@@ -1,7 +1,7 @@
 ---
 name: "Meeting (Intern)"
 about: "Meeting oder Workshop planen und dokumentieren"
-labels: ["scope:internal"]
+labels: ["scope:internal", "type:meeting"]
 ---
 
 ### Planung
