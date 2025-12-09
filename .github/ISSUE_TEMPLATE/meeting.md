@@ -1,48 +1,42 @@
 ---
-name: "🗓️ Meeting / Workshop planen"
-about: "Einen Workshop, eine Demo oder ein anderes Meeting planen und vorbereiten."
-title: "[Meeting] "
-type: "🗓️ Meeting"
+name: "Meeting (Intern)"
+about: "Meeting oder Workshop planen und dokumentieren"
+labels: ["scope:internal"]
 ---
 
-### 1. Planung & Agenda
+### Planung
 
-*Vor dem Meeting ausgefüllen.*
-| 🗓️                |       |
-|:-----------------|:-------|
-| **Datum & Zeit** |        |
-| **Dauer**   |        |
-| **Teilnehmer**   |        |
-| **Thema**        |        |
+| | |
+|:--|:--|
+| **Datum & Zeit** | |
+| **Dauer** | |
+| **Teilnehmer** | |
+| **Ort / Link** | |
 
-**Ziele:**
+---
+
+### Ziele
 1. Ziel 1
 2. Ziel 2
 
-**Erwartete Ergebnisse:**
-> ...
+---
 
-**Agenda-Punkte:**
+### Agenda
 - [ ] Punkt 1
 - [ ] Punkt 2
+- [ ] Punkt 3
 
 ---
 
-### 2. Protokoll & Ergebnisse
+### Protokoll
+*Nach dem Meeting ausfüllen.*
 
-*Während des / nach dem Meeting ausgefüllen. Der Titel des Issues ggf. angepassen (z.B. "[Meeting] Entscheidung für XY getroffen").*
+#### Entscheidungen
+- ...
 
-#### Wichtigste Erkenntnisse & Entscheidungen:
-- **Erkenntnis 1:** ...
-- **Entscheidung 1:** ...
+#### Offene Punkte
+- ...
 
-#### Whiteboard / Sketch:
-*Screenshot oder Link zu ExcaliDraw-Whiteboards falls relevant.*
-![Whiteboard Sketch](LINK_ZUM_BILD.png)
-
-#### Beschlossene Maßnahmen (Action Items):
-*Fall es dazu ein zugehöriges Issue gibt, kann es hier verlinkt werden.*
-
-- [ ] Maßnahme 1 - `[Link zum neuen Job Story / Task Issue]`
-- [ ] Maßnahme 2 - `[Link zum neuen Job Story / Task Issue]`
-- [ ] Zuständigkeit klären für Thema Y - @Benutzername
+#### Nächste Schritte
+- [ ] Aktion 1 — @verantwortlich
+- [ ] Aktion 2 — @verantwortlich

@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Mission Control Board
+  - name: Mission Control (Engineering)
     url: https://github.com/orgs/geocubes/projects/1
-    about: Central cross-repo views and filters
+    about: Cross-repo engineering board for code, packages, and infrastructure
+  - name: GeoCubes Internal (GmbH)
+    url: https://github.com/orgs/geocubes/projects/2
+    about: Company coordination board for admin, legal, and client matters

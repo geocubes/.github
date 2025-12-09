@@ -1,0 +1,95 @@
+# Org-wide label definitions for geocubes
+# Synced to all repositories via GitHub Actions
+#
+# Colors: Use hex without #
+# - Red:    d73a4a (critical/blocked)
+# - Orange: f9a825 (high priority, needs-input)
+# - Yellow: fbca04 (ui)
+# - Green:  0e8a16 (domain)
+# - Blue:   1d76db (capability)
+# - Purple: 6f42c1 (scope)
+# - Gray:   5319e7 (area)
+
+# =============================================================================
+# SCOPE - Organizational boundary
+# =============================================================================
+- name: "scope:internal"
+  color: "6f42c1"
+  description: "GmbH, admin, legal, company matters"
+
+# =============================================================================
+# DOMAIN - Business problem domain (DDD)
+# =============================================================================
+- name: "domain:tunnelling"
+  color: "0e8a16"
+  description: "NATM, settlement, heave, FEM analysis"
+
+# Future domains (uncomment when needed):
+# - name: "domain:structural"
+#   color: "0e8a16"
+#   description: "Structural engineering domain"
+#
+# - name: "domain:hydraulic"
+#   color: "0e8a16"
+#   description: "Hydraulic engineering domain"
+
+# =============================================================================
+# CAPABILITY - Problem area within a domain
+# =============================================================================
+- name: "capability:settlement"
+  color: "1d76db"
+  description: "FEM forecasts, ground movement prediction"
+
+- name: "capability:interpolation"
+  color: "1d76db"
+  description: "Spatial methods, Frenet coordinates, gridding"
+
+- name: "capability:upheave"
+  color: "1d76db"
+  description: "Heave planning, compensation grouting"
+
+- name: "capability:risk"
+  color: "1d76db"
+  description: "Building assessment, angular distortion, limits"
+
+# Future capability (uncomment when needed):
+# - name: "capability:monitoring"
+#   color: "1d76db"
+#   description: "Sensor data, time series integration"
+
+# =============================================================================
+# AREA - Technical stack location
+# =============================================================================
+- name: "area:packages"
+  color: "5319e7"
+  description: "geocubes-* Python libraries (monorepo)"
+
+- name: "area:ui"
+  color: "5319e7"
+  description: "Dashboard applications"
+
+- name: "area:platform"
+  color: "5319e7"
+  description: "Infrastructure, deployment, DevOps, CI/CD"
+
+# =============================================================================
+# STATUS - Temporary state markers
+# =============================================================================
+- name: "status:blocked"
+  color: "d73a4a"
+  description: "Waiting on external dependency"
+
+- name: "status:needs-input"
+  color: "f9a825"
+  description: "Waiting for stakeholder decision"
+
+# =============================================================================
+# PRIORITY - Urgency (only elevated)
+# =============================================================================
+- name: "priority:critical"
+  color: "d73a4a"
+  description: "Drop everything - production issue"
+
+- name: "priority:high"
+  color: "f9a825"
+  description: "Important - address this week"

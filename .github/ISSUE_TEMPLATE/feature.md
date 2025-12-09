@@ -1,28 +1,23 @@
 ---
-name: "🧩 Feature"
-about: Eine für den Anwender sichtbare Funktionalität vorschlagen, die eine Job Story umsetzt.
-title: "[Feature] "
-type: "🧩 Feature"
+name: "Feature"
+about: "Propose a user-facing capability"
+labels: []
 ---
 
-### Beschreibung des Features
-*Sas soll das neue Feature aus Anwendersicht leisten?*
-
----
-
-### Zugehörige Job Story
-
-- Implementiert: #Nummer_der_Job_Story
+### Description
+*What should this feature enable? Who benefits?*
 
 ---
 
-### Technische Anforderungen & Hinweise
-*Gibt es technische Details oder Entwurfs-Entscheidungen, die für die Umsetzung relevant sind?*
+### Related Documentation
+*Link to Job Story, Use Case, or Capability doc if applicable.*
 
-- ...
-- ...
+- Job Story: `docs/domain/job-stories/js-xxx.md`
+- Use Case: `docs/domain/use-cases/uc-xxx.md`
+- Capability: `docs/domain/capabilities/...`
 
-### Akzeptanzkriterien
+---
 
-- [ ] Kriterium 1
-- [ ] Kriterium 2 
+### Acceptance Criteria
+- [ ] Criterion 1
+- [ ] Criterion 2

@@ -1,0 +1,50 @@
+# Sync org-wide labels to all repositories
+#
+# Triggers:
+#   - Push to labels.yml on main branch
+#   - Manual dispatch (for initial sync or debugging)
+#
+# Required secrets:
+#   - ORG_ADMIN_TOKEN: PAT with repo scope for all org repos
+#     (Fine-grained: Issues Read+Write, Metadata Read)
+
+name: Sync Labels
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "labels.yml"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (no changes)"
+        type: boolean
+        default: false
+
+jobs:
+  sync:
+    name: Sync labels to repositories
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        repo:
+          - geocubes
+          - geocubes-org
+          - infra
+          - dashboard-2SBSS
+          - dashboard-ZSTH
+          # Add new repos here
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Sync labels to ${{ matrix.repo }}
+        uses: EndBug/label-sync@v2
+        with:
+          config-file: labels.yml
+          repository: geocubes/${{ matrix.repo }}
+          delete-other-labels: true # Set to true to enforce exact label set
+          token: ${{ secrets.GC_ORG_ADMIN_TOKEN }}
+          dry-run: ${{ inputs.dry_run || false }}

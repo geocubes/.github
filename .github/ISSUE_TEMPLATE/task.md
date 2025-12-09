@@ -1,26 +1,31 @@
 ---
-name: 🔧 Task
-about: "Technischer Umsetzungsschritt für ein Feature"
-title: "[Task] "
-type: "🔧 Task"
+name: "Task"
+about: "A specific piece of technical work"
+labels: []
 ---
 
-### Beschreibung
+### Description
+*What needs to be done?*
 
 ---
 
-### Zugehöriges Feature / Bug
-*Link zum übergeordneten Feature oder Bug.*
+### Context
+*Link to parent Feature, Bug, or related work.*
 
-- Benötigt für: #Nummer_des_Features
+- Related: #
+
+---
+
+### Type
+- [ ] Implementation
+- [ ] Refactoring
+- [ ] Spike / Exploration
+- [ ] Documentation
+- [ ] Infrastructure / DevOps
 
 ---
 
 ### Definition of Done
-*Was muss technisch erfüllt sein, damit dieser Task als abgeschlossen gilt?*
-
-- [ ] Code wurde implementiert.
-- [ ] Unit-Tests wurden geschrieben und sind erfolgreich (Coverage > 85%).
-- [ ] Code ist formatiert und hat den Linter-Check bestanden.
-- [ ] Notwendige Dokumentation (z.B. Docstrings) wurde aktualisiert.
-- [ ] Pull Request wurde erstellt und genehmigt.
+- [ ] Code implemented
+- [ ] Tests passing
+- [ ] PR reviewed and merged
