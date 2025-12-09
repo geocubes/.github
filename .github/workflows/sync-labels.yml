@@ -2,7 +2,7 @@
 #
 # Triggers:
 #   - Push to labels.yml on main branch
-#   - Manual dispatch (for initial sync or debugging)
+#   - Manual dispatch (for initial sync)
 #
 # Required secrets:
 #   - GC_ORG_ADMIN_TOKEN: PAT with repo scope for all org repos
@@ -14,41 +14,26 @@ on:
   push:
     branches: [main]
     paths:
-      - "labels.yml"
+      - labels.yml
   workflow_dispatch:
-    inputs:
-      dry_run:
-        description: "Dry run (no changes)"
-        type: boolean
-        default: false
 
 jobs:
   sync:
     name: Sync labels to repositories
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    strategy:
-      fail-fast: false
-      matrix:
-        repo:
-          - geocubes
-          - geocubes-org
-          - infra
-          - dashboard-2SBSS
-          - dashboard-ZSTH
-          # Add new repos here
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          sparse-checkout: labels.yml
 
-      - name: Sync labels to ${{ matrix.repo }}
-        uses: EndBug/label-sync@v2
+      - name: Sync labels
+        uses: micnncim/action-label-syncer@v1
         with:
-          config-file: ./labels.yml
-          repository: geocubes/${{ matrix.repo }}
-          delete-other-labels: true
-          dry-run: ${{ inputs.dry_run || false }}
+          manifest: labels.yml
+          repository: |
+            geocubes/geocubes
+            geocubes/geocubes-org
+            geocubes/infra
+            geocubes/dashboard-2SBSS
+            geocubes/dashboard-ZSTH
+          prune: false
           token: ${{ secrets.GC_ORG_ADMIN_TOKEN }}

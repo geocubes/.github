@@ -1,72 +1,60 @@
 # Org-wide label definitions for geocubes
 # Synced to all repositories via GitHub Actions
 
-# =============================================================================
 # SCOPE - Organizational boundary
-# =============================================================================
 - name: scope:internal
-  color: '#6f42c1'
   description: GmbH, admin, legal, company matters
+  color: 6f42c1
 
-# =============================================================================
 # DOMAIN - Business problem domain (DDD)
-# =============================================================================
 - name: domain:tunnelling
-  color: '#0e8a16'
   description: NATM, settlement, heave, FEM analysis
+  color: 0e8a16
 
-# =============================================================================
 # CAPABILITY - Problem area within a domain
-# =============================================================================
 - name: capability:settlement
-  color: '#1d76db'
   description: FEM forecasts, ground movement prediction
+  color: 1d76db
 
 - name: capability:interpolation
-  color: '#1d76db'
   description: Spatial methods, Frenet coordinates, gridding
+  color: 1d76db
 
 - name: capability:upheave
-  color: '#1d76db'
   description: Heave planning, compensation grouting
+  color: 1d76db
 
 - name: capability:risk
-  color: '#1d76db'
   description: Building assessment, angular distortion, limits
+  color: 1d76db
 
-# =============================================================================
 # AREA - Technical stack location
-# =============================================================================
 - name: area:packages
-  color: '#5319e7'
   description: geocubes-* Python libraries (monorepo)
+  color: 5319e7
 
 - name: area:ui
-  color: '#5319e7'
   description: Dashboard applications
+  color: 5319e7
 
 - name: area:platform
-  color: '#5319e7'
   description: Infrastructure, deployment, DevOps, CI/CD
+  color: 5319e7
 
-# =============================================================================
 # STATUS - Temporary state markers
-# =============================================================================
 - name: status:blocked
-  color: '#d73a4a'
   description: Waiting on external dependency
+  color: d73a4a
 
 - name: status:needs-input
-  color: '#f9a825'
   description: Waiting for stakeholder decision
+  color: f9a825
 
-# =============================================================================
 # PRIORITY - Urgency (only elevated)
-# =============================================================================
 - name: priority:critical
-  color: '#d73a4a'
   description: Drop everything - production issue
+  color: d73a4a
 
 - name: priority:high
-  color: '#f9a825'
   description: Important - address this week
+  color: f9a825
