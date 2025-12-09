@@ -5,7 +5,7 @@
 #   - Manual dispatch (for initial sync or debugging)
 #
 # Required secrets:
-#   - ORG_ADMIN_TOKEN: PAT with repo scope for all org repos
+#   - GC_ORG_ADMIN_TOKEN: PAT with repo scope for all org repos
 #     (Fine-grained: Issues Read+Write, Metadata Read)
 
 name: Sync Labels
@@ -26,6 +26,8 @@ jobs:
   sync:
     name: Sync labels to repositories
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     strategy:
       fail-fast: false
       matrix:
@@ -39,12 +41,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          sparse-checkout: labels.yml
 
       - name: Sync labels to ${{ matrix.repo }}
         uses: EndBug/label-sync@v2
         with:
-          config-file: labels.yml
+          config-file: ./labels.yml
           repository: geocubes/${{ matrix.repo }}
-          delete-other-labels: true # Set to true to enforce exact label set
-          token: ${{ secrets.GC_ORG_ADMIN_TOKEN }}
+          delete-other-labels: true
           dry-run: ${{ inputs.dry_run || false }}
+          token: ${{ secrets.GC_ORG_ADMIN_TOKEN }}
