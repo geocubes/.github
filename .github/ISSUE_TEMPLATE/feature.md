@@ -1,7 +1,7 @@
 ---
 name: "Feature"
 about: "Propose a user-facing capability"
-labels: []
+labels: ["status:needs-refinement"]
 ---
 
 ### Description
@@ -9,15 +9,39 @@ labels: []
 
 ---
 
-### Related Documentation
-*Link to Job Story, Use Case, or Capability doc if applicable.*
+### Job Story
 
-- Job Story: `docs/domain/job-stories/js-xxx.md`
-- Use Case: `docs/domain/use-cases/uc-xxx.md`
-- Capability: `docs/domain/capabilities/...`
+**When** [situation/trigger],
+**I want** [motivation/capability],
+**so that** [expected outcome].
+
+> Link to full doc: `docs/domain/job-stories/...`
 
 ---
 
 ### Acceptance Criteria
-- [ ] Criterion 1
-- [ ] Criterion 2
+
+*Populated after Example Mapping session. Use Given/When/Then format.*
+
+**Rule 1:** [Business rule]
+- [ ] Given [context], When [action], Then [outcome]
+- [ ] Given [context], When [action], Then [outcome]
+
+**Rule 2:** [Business rule]
+- [ ] ...
+
+---
+
+### Related Documentation
+
+- Job Story: `docs/domain/job-stories/...`
+- Use Case: `docs/domain/use-cases/...`
+- Example Map: [Miro link]
+
+---
+
+### Tasks
+
+*Created after refinement*
+
+- [ ] #

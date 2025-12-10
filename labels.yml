@@ -59,6 +59,19 @@
   description: Waiting for stakeholder decision
   color: f9a825
 
+- name: status:needs-refinement
+  description: Needs Example Mapping or domain clarification before ready
+  color: d93f0b
+
+- name: status:ready
+  description: Refined with acceptance criteria, ready for development
+  color: 0e8a16
+
+# DISCOVERY - Workshop artifacts
+- name: hot-spot
+  description: Risk or problem area identified in workshop
+  color: ff69b4
+
 # PRIORITY - Urgency (only elevated)
 - name: priority:critical
   description: Drop everything - production issue
