@@ -1,7 +1,7 @@
 ---
 name: "Task"
 about: "A specific piece of technical work"
-labels: []
+labels: ["workstream:delivery"]
 ---
 
 ### Description

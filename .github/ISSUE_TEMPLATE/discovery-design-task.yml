@@ -1,5 +1,7 @@
 name: "Discovery/Design Task"
 description: "Track a Discovery → Design work item (links to Discussion + canonical docs; no duplicated spec)."
+labels:
+  - "workstream:discovery-design"
 projects:
   - "geocubes/1"
 body:

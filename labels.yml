@@ -87,3 +87,11 @@
   description: Important - address this week
   color: f9a825
 
+# WORKSTREAM - Project workflow track
+- name: workstream:discovery-design
+  description: Discovery/design - objectives, scenarios, decision-points
+  color: 7057ff
+
+- name: workstream:delivery
+  description: Delivery - implementation and dev work
+  color: 0e8a16

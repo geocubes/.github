@@ -1,6 +1,6 @@
 name: "Workshop"
 description: "Workshop dokumentieren (DST, EventStorming, Example Mapping)"
-labels: ["type:workshop"]
+labels: ["type:workshop", "workstream:discovery-design"]
 
 body:
   - type: markdown

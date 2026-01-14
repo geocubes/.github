@@ -1,7 +1,7 @@
 ---
 name: "Feature"
 about: "Propose a user-facing capability"
-labels: ["status:needs-refinement"]
+labels: ["status:needs-refinement", "workstream:delivery"]
 ---
 
 ### Description
