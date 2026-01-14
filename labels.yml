@@ -74,6 +74,9 @@
 - name: question
   description: Domain question blocking DP/AS/Feature
   color: ff69b4
+- name: glossar
+  description: Terminology/glossary related
+  color: ff69b4
 
 # PRIORITY - Urgency (only elevated)
 - name: priority:critical
