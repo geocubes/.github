@@ -1,0 +1,43 @@
+name: "Discovery/Design Task"
+description: "Track a Discovery → Design work item (links to Discussion + canonical docs; no duplicated spec)."
+title: ""
+projects:
+  - "geocubes/1"
+body:
+  - type: input
+    id: discussion
+    attributes:
+      label: Discussion link
+      description: "Single source of reasoning + decisions."
+      placeholder: "https://github.com/orgs/<org>/discussions/<id>"
+    validations:
+      required: true
+
+  - type: textarea
+    id: next_action
+    attributes:
+      label: Next action
+      description: "One sentence. What’s the next concrete step?"
+      placeholder: "Review AS-014 assumptions and post resolution summary in the discussion."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      options:
+        - PlanningPhase
+        - ExecutionPhase
+        - Both / NA
+    validations:
+      required: true
+
+  - type: input
+    id: done_when
+    attributes:
+      label: Done when
+      description: "Keep it short."
+      placeholder: "Discussion has a resolution summary and is closed."
+    validations:
+      required: true
