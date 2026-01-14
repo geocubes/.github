@@ -1,6 +1,5 @@
 name: "Discovery/Design Task"
 description: "Track a Discovery → Design work item (links to Discussion + canonical docs; no duplicated spec)."
-title: ""
 projects:
   - "geocubes/1"
 body:
