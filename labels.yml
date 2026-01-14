@@ -71,6 +71,9 @@
 - name: hot-spot
   description: Risk or problem area identified in workshop
   color: ff69b4
+- name: question
+  description: Domain question blocking DP/AS/Feature
+  color: ff69b4
 
 # PRIORITY - Urgency (only elevated)
 - name: priority:critical
@@ -80,3 +83,4 @@
 - name: priority:high
   description: Important - address this week
   color: f9a825
+
